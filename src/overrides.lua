@@ -808,6 +808,7 @@ function G.UIDEF.deck_preview(args)
 		if not hidden_suits[v] then
 			local deckskin = SMODS.DeckSkins[G.SETTINGS.CUSTOM_DECK.Collabs[v]]
 			local palette = deckskin and (deckskin.palette_map and deckskin.palette_map[G.SETTINGS.colour_palettes[v] or ""] or (deckskin.palettes or {})[1]) or {}
+			local t_s
 			if palette and palette.suit_icon and palette.suit_icon.atlas then
 				local _x = (v == 'Spades' and 3) or (v == 'Hearts' and 0) or (v == 'Clubs' and 2) or (v == 'Diamonds' and 1)
 				local atlas_key = palette.suit_icon.atlas or 'ui_1'
