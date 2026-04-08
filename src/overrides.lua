@@ -733,7 +733,7 @@ function G.UIDEF.deck_preview(args)
 				if v.base.suit == kk and not v_ns then suit_counts[kk] = suit_counts[kk] + 1 end
 				if v:is_suit(kk) then mod_suit_counts[kk] = mod_suit_counts[kk] + 1 end
 			end
-			if v.base.suit and SUITS[v.base.suit][v.base.value] and not v_nr and not v_ns then
+			if v.base.suit and SUITS[v.base.suit] and SUITS[v.base.suit][v.base.value] and not v_nr and not v_ns then
 				table.insert(SUITS[v.base.suit][v.base.value], v)
 			end
 			if not v_nr then
